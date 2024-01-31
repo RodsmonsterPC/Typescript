@@ -17,25 +17,24 @@ export default function () {
     let edit_btn = peli.querySelector(".edit");
     //Asignar un evento click
     edit_btn.onclick = function () {
-      //Conseguir el id d ela pelia  eliminar
+      //Conseguir el id de la pelicula a eliminar
       const peli_id = parseInt(this.getAttribute("data-id"));
       //Quitar botones
       edit_btn.remove();
-      peli.querySelector(".delete");
+      peli.querySelector(".delete").remove();
 
-      //Añadir un troxo de html debajo de los botones
+      //Añadir un trozo de html debajo de los botones
       let peli_edit_html = `
         <div class="edit_form"> 
-       
-        <h3 class="title">Editar peliculas </h3>
+        <h3 class="title">Editar peliculas</h3>
         <form>
         <input type="text" class="edited_title" value="${
           peli.querySelector(".title").innerHTML
-        }">
+        }"/>
         <textarea class="edited_description">${
           peli.querySelector(".description").innerHTML
-        }</textarear>
-        <input type="submit" class="update" value="Actualizar">
+        }</textarea>
+        <input type="submit" class="update" value="Actualizar"/>
         </form>
         </div>`;
 

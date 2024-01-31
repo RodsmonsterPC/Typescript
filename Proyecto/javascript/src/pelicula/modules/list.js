@@ -10,8 +10,8 @@ export default class List {
     return `<article id="peli-${peli.id}" class="peli-item">
         <h3 class="title">${peli.title}</h3>
         <p class="description">${peli.description}</p>
-        <button class="edit" data-id=${peli.id}></button>
-        <button class="delete" data-id=${peli.id}></button>
+        <button class="edit" data-id=${peli.id}>Editar</button>
+        <button class="delete" data-id=${peli.id}>Borrar</button>
       </article>`;
   }
 

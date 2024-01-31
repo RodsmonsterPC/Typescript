@@ -16,11 +16,11 @@ export default class Add {
       e.preventDefault();
       //Cosneguir datos actualizados
       let pelis = this.storage.getData();
-      let lastId = this.storage.getLasId();
+      let lastId = this.storage.getLastId();
       //Datos a guardar
       let title = this.title.value;
       let description = this.description.value;
-
+      console.log(pelis, lastId);
       //Validar campos
       if (title != "" || description != "") {
         //crear objeto a guardar
@@ -33,9 +33,10 @@ export default class Add {
         //Añadir al array de objetos
         pelis.push(peli);
         //Guardar en el localstorage
-        this.storage.save(peli);
+        this.storage.save(pelis);
         //Actualizar el listado
-        this.list.addToList(peli, pelis);
+        //this.list.addToList(peli, pelis);
+        this.list.show(pelis);
       } else {
         alert("Introduce bien los datos en el formulario");
       }

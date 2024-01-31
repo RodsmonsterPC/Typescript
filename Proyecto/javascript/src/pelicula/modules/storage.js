@@ -5,7 +5,7 @@ export default class Storage {
 
   getData() {
     let pelis = JSON.parse(localStorage.getItem("Peliculas"));
-    if (!pelis || pelis.lenght < 1) {
+    if (!pelis || pelis.length < 1) {
       pelis = [
         {
           id: 0,
@@ -15,13 +15,13 @@ export default class Storage {
       ];
       this.id = 1;
     } else {
-      this.id = pelis[pelis.lenght - 1].id + 1;
+      this.id = pelis[pelis.length - 1].id + 1;
     }
 
     return pelis;
   }
 
-  getLasId() {
+  getLastId() {
     return this.id;
   }
   save(data) {

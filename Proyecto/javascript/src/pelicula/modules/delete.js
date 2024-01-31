@@ -1,5 +1,5 @@
 import Storage from "./storage.js";
-import List from "./list";
+import List from "./list.js";
 
 export default function () {
   //Crear objetos
