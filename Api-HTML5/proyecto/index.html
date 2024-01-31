@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/styles.css" />
+
+    <title>Proyecto</title>
+  </head>
+  <body>
+    <div class="layout">
+      <header class="header">
+        <div class="logo">
+          <div class="play"></div>
+        </div>
+        <h1>Mis Pelis</h1>
+      </header>
+
+      <nav class="nav">
+        <ul>
+          <li><a href="#">Inicio</a></li>
+          <li><a href="#">Peliculas</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <section id="content" class="content">
+        <article class="peli-item">
+          <h3 class="title">Desarrollo Web</h3>
+          <p class="description">Un futuro más conectado</p>
+          <button class="edit">Editar</button>
+          <button class="delete">Borrar</button>
+        </article>
+      </section>
+
+      <aside class="lateral">
+        <div class="search">
+          <h3 class="title">Buscador</h3>
+          <form action="">
+            <input type="text" id="search_field" />
+            <button id="search">buscar</button>
+          </form>
+        </div>
+        <div class="add">
+          <h3 class="tittle">Añadir Pelicula</h3>
+          <form action="">
+            <input id="title" type="text" placeholder="titulo" />
+            <textarea id="description" placeholder="descripcion"></textarea>
+            <input id="save" type="submit" value="Guardar" />
+          </form>
+        </div>
+      </aside>
+
+      <footer class="footer">
+        Rodolfo Pérez Cerecedo - Master javascript ES12 y Typescript Moderno
+      </footer>
+    </div>
+    <script src="./javascript/main.js" type="module"></script>
+  </body>
+</html>
